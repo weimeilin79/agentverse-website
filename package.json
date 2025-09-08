@@ -1,0 +1,12 @@
+{
+  "name": "agentverse-workshop",
+  "version": "1.0.0",
+  "description": "A Node.js application for the Agentverse Workshop.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

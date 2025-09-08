@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Agentverse Workshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-4 md:p-8">
+    <div class="container mx-auto max-w-5xl">
+        <!-- Main Title -->
+        <header class="text-center my-12">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight">THE AGENTVERSE</h1>
+            <p class="mt-4 text-lg text-gray-400">A Call to Champions</p>
+        </header>
+
+        <!-- Welcome -->
+        <div class="dialog-box text-center">
+             <p class="text-base md:text-lg leading-relaxed">
+               Welcome, champion. A creeping chaos known as The Static threatens the Agentverse, and we need heroes like you to restore order. Your journey begins now. Master your craft, work with your allies, and push back the tide of corruption. Choose your path below to receive your first mission.
+            </p>
+        </div>
+
+        <!-- Agentverse Image -->
+        <div class="mb-8 rounded-lg overflow-hidden border border-solid border-[rgba(100,116,139,0.3)]">
+            <img src="https://codelabs.devsite.corp.google.com/static/agentverse-devopssre/img/agentverse_1920.png" alt="An illustration of the Agentverse showing interconnected nodes and pathways" class="w-full">
+        </div>
+
+
+        <!-- Choose Your Class -->
+        <div class="dialog-box">
+            <h2 class="text-3xl mb-8 text-center font-bold">Choose Your Class</h2>
+            <div id="class-selection" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Shadowblade -->
+                <div class="class-card" data-class="Shadowblade" data-credit-link="https://goo.gle/bos-credits" data-lab-link="https://codelabs.developers.google.com/agentverse-developer/instructions#0">
+                    <img src="img/developer.png" alt="Shadowblade Class placeholder" class="w-full h-auto block">
+                    <div class="p-6">
+                        <h3 class="text-xl mb-3 font-bold class-title">The Shadowblade (Developer)</h3>
+                        <p class="text-sm leading-relaxed text-gray-300">Master of the forge and the front line. You craft the tools and face the enemy in the intricate details of the code.</p>
+                    </div>
+                </div>
+                <!-- Summoner -->
+                <div class="class-card" data-class="Summoner" data-credit-link="https://goo.gle/bos-credits" data-lab-link="https://codelabs.developers.google.com/agentverse-architect/instructions#0">
+                    <img src="img/architect.png" alt="Summoner Class placeholder" class="w-full h-auto block">
+                    <div class="p-6">
+                        <h3 class="text-xl mb-3 font-bold class-title">The Summoner (Architect)</h3>
+                        <p class="text-sm leading-relaxed text-gray-300">A grand strategist and orchestrator. You design the master blueprints that allow entire systems of agents to collaborate.</p>
+                    </div>
+                </div>
+                <!-- Scholar -->
+                <div class="class-card" data-class="Scholar" data-credit-link="https://goo.gle/bos-credits" data-lab-link="https://codelabs.developers.google.com/agentverse-dataengineer/instructions#0">
+                    <img src="img/dataeng.png" alt="Scholar Class placeholder" class="w-full h-auto block">
+                    <div class="p-6">
+                        <h3 class="text-xl mb-3 font-bold class-title">The Scholar (Data Engineer)</h3>
+                        <p class="text-sm leading-relaxed text-gray-300">A seeker of hidden truths. You venture into the wilderness of data to give your agents purpose and sight.</p>
+                    </div>
+                </div>
+                <!-- Guardian -->
+                <div class="class-card" data-class="Guardian" data-credit-link="https://goo.gle/bos-gpu-credits" data-lab-link="https://codelabs.developers.google.com/agentverse-devopssre/instructions#0">
+                    <img src="img/devopssre.png" alt="Guardian Class placeholder" class="w-full h-auto block">
+                    <div class="p-6">
+                        <h3 class="text-xl mb-3 font-bold class-title">The Guardian (DevOps / SRE)</h3>
+                        <p class="text-sm leading-relaxed text-gray-300">The steadfast protector. You build the fortresses and ensure the system can withstand any attack.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mission Modal -->
+    <div id="mission-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div id="modal-close" class="modal-close-btn">X</div>
+            <div class="dialog-box">
+                <h2 id="mission-title" class="text-2xl mb-6 font-bold">Your Mission: The Shadowblade</h2>
+                
+                <!-- Step 1: Credit Instructions -->
+                <div id="modal-step-1" class="modal-step-content">
+                    <h3 class="text-xl mb-4 text-gray-200 font-bold">Objective 1: Claim Credits</h3>
+                    <p class="text-sm mb-4 text-gray-300">Follow these instructions carefully to provision your workshop resources.</p>
+                    
+                    <div class="text-sm">
+                        <h4 class="text-md mb-3 font-bold text-gray-100">Before You Start</h4>
+                        <ul class="instruction-list mb-6">
+                            <li>Use a <span class="text-yellow-300 font-semibold">personal Gmail account</span>. Corporate or school-managed accounts will NOT work.</li>
+                            <li>Use Google Chrome in <span class="text-yellow-300 font-semibold">Incognito mode</span> to prevent account conflicts.</li>
+                        </ul>
+
+                        <h4 class="text-md mb-3 font-bold text-gray-100">Instructions</h4>
+                        <ul class="instruction-list">
+                           <li>Open a new Incognito window, paste your event link, and sign in with your personal Gmail.</li>
+                           <li>
+                                <div>
+                                    <p class="mb-2">Click below to copy your special event link:</p>
+                                    <div id="credit-link-container" class="mt-1 flex items-center bg-gray-900 border border-gray-600 rounded-md p-2 cursor-pointer relative group">
+                                        <span id="credit-link-display" class="text-gray-400 font-mono text-sm truncate mr-2"></span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard text-gray-400 group-hover:text-yellow-300" viewBox="0 0 16 16">
+                                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                        </svg>
+                                        <span id="copy-feedback" class="absolute right-2 top-1/2 -translate-y-1/2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded hidden">Copied!</span>
+                                    </div>
+                                </div>
+                           </li>
+                           <li>Accept the Google Cloud Platform Terms of Service. Once applied, you'll see the message showing the credit has applied.<div class="screenshot-placeholder"> <img src="img/credit-applied.png"/></div></li>
+                           
+                           <li class="text-gray-400 italic">If prompted to enter credit card information, you can safely ignore it and proceed.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2: Create Project -->
+                <div id="modal-step-2" class="modal-step-content hidden">
+                    <h3 class="text-xl mb-4 text-gray-200 font-bold">Objective 2: Create & Configure Project</h3>
+                    <p class="text-sm mb-4 text-gray-300">Now that your credits are applied, set up your project environment.</p>
+                    <div class="text-sm">
+                        <ul class="instruction-list">
+                            <li>
+                                <div>
+                                    <p class="mb-2">Go to the Google Cloud Console. Click below to copy the link:</p>
+                                    <div id="console-link-container" class="mt-1 flex items-center bg-gray-900 border border-gray-600 rounded-md p-2 cursor-pointer relative group">
+                                        <span id="console-link-display" class="text-gray-400 font-mono text-sm truncate mr-2">https://console.cloud.google.com/</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard text-gray-400 group-hover:text-yellow-300" viewBox="0 0 16 16">
+                                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                        </svg>
+                                        <span id="console-copy-feedback" class="absolute right-2 top-1/2 -translate-y-1/2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded hidden">Copied!</span>
+                                    </div>
+                                </div>
+                           </li>
+                           <li>In the console's top navigation bar, click <span class="text-yellow-300 font-semibold">Select a project</span>, then <span class="text-yellow-300 font-semibold">New Project</span> in the top right corner.
+                            <div class="screenshot-placeholder"><img src="img/find-project.png"/></div>
+                           </li>
+                           <li>Give your project a name and click <span class="text-yellow-300 font-semibold">Create</span>. (No Organization)
+                            <div class="screenshot-placeholder"><img src="img/new-project.png"/></div>
+                           </li>
+                           <li>Once created, select it. In the left-hand menu, go to <span class="text-yellow-300 font-semibold">Billing</span>.
+                             <div class="screenshot-placeholder"><img src="img/billing.png"/></div>
+                           </li>
+                           <li>
+                                Click <span class="text-yellow-300 font-semibold">Link a billing account</span>, select <span class="text-yellow-300 font-semibold">Google Cloud Platform Trial Billing Account</span> from the dropdown, and click <span class="text-yellow-300 font-semibold">Set account</span>.
+                                <p class="text-gray-400 text-xs italic mt-2">(If you don't see the dropdown menu, wait one minute for the credit to be applied and reload the page.)</p>
+                                <div class="screenshot-placeholder"><img src="img/link-billing.png"/></div>
+                           </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+
+                <!-- Step 3: Lab Link -->
+                <div id="modal-step-3" class="modal-step-content hidden">
+                    <h3 class="text-xl mb-4 text-gray-200 font-bold">Objective 3: Begin Your Training</h3>
+                    <p class="text-sm text-gray-300">Your preparations are complete. Your credits are active and your project is configured. It's time to begin your trial and master your craft.</p>
+                    <p class="text-sm mt-4 text-gray-300">May your code be clean and your deployments swift, champion.</p>
+                    <div class="text-center mt-8">
+                         <a id="lab-link" href="#" target="_blank" class="mission-link">Start The Lab</a>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="step-navigation">
+                    <button id="modal-back-btn" class="nav-button">◄ Back</button>
+                    <button id="modal-next-btn" class="nav-button">Next ►</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
