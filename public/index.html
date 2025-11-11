@@ -36,7 +36,7 @@
             <h2 class="text-3xl mb-8 text-center font-bold">Choose Your Class</h2>
             <div id="class-selection" class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Shadowblade -->
-                <div class="class-card" data-class="Shadowblade" data-credit-link="https://goo.gle/nyc-credits" data-lab-link="https://codelabs.developers.google.com/agentverse-developer/instructions#0">
+                <div class="class-card" data-class="Shadowblade" data-credit-link="https://goo.gle/sea-credits" data-lab-link="https://codelabs.developers.google.com/agentverse-developer/instructions#0">
                     <img src="img/developer.png" alt="Shadowblade Class placeholder" class="w-full h-auto block">
                     <div class="p-6">
                         <h3 class="text-xl mb-3 font-bold class-title">The Shadowblade (Developer)</h3>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <!-- Summoner -->
-                <div class="class-card" data-class="Summoner" data-credit-link="https://goo.gle/nyc-credits" data-lab-link="https://codelabs.developers.google.com/agentverse-architect/instructions#0">
+                <div class="class-card" data-class="Summoner" data-credit-link="https://goo.gle/sea-credits" data-lab-link="https://codelabs.developers.google.com/agentverse-architect/instructions#0">
                     <img src="img/architect.png" alt="Summoner Class placeholder" class="w-full h-auto block">
                     <div class="p-6">
                         <h3 class="text-xl mb-3 font-bold class-title">The Summoner (Architect)</h3>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <!-- Scholar -->
-                <div class="class-card" data-class="Scholar" data-credit-link="https://goo.gle/nyc-credits" data-lab-link="https://codelabs.developers.google.com/agentverse-dataengineer/instructions#0">
+                <div class="class-card" data-class="Scholar" data-credit-link="https://goo.gle/sea-credits" data-lab-link="https://codelabs.developers.google.com/agentverse-dataengineer/instructions#0">
                     <img src="img/dataeng.png" alt="Scholar Class placeholder" class="w-full h-auto block">
                     <div class="p-6">
                         <h3 class="text-xl mb-3 font-bold class-title">The Scholar (Data Engineer)</h3>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <!-- Guardian -->
-                <div class="class-card" data-class="Guardian" data-credit-link="https://goo.gle/nyc-gpu-credits" data-lab-link="https://codelabs.developers.google.com/agentverse-devopssre/instructions#0">
+                <div class="class-card" data-class="Guardian" data-credit-link="https://goo.gle/sea-gpu-credits" data-lab-link="https://codelabs.developers.google.com/agentverse-devopssre/instructions#0">
                     <img src="img/devopssre.png" alt="Guardian Class placeholder" class="w-full h-auto block">
                     <div class="p-6">
                         <h3 class="text-xl mb-3 font-bold class-title">The Guardian (DevOps / SRE)</h3>
@@ -113,47 +113,11 @@
                     </div>
                 </div>
 
-                <!-- Step 2: Create Project -->
-                <div id="modal-step-2" class="modal-step-content hidden">
-                    <h3 class="text-xl mb-4 text-gray-200 font-bold">Objective 2: Create & Configure Project</h3>
-                    <p class="text-sm mb-4 text-gray-300">Now that your credits are applied, set up your project environment.</p>
-                    <div class="text-sm">
-                        <ul class="instruction-list">
-                            <li>
-                                <div>
-                                    <p class="mb-2">Go to the Google Cloud Console. Click below to copy the link:</p>
-                                    <div id="console-link-container" class="mt-1 flex items-center bg-gray-900 border border-gray-600 rounded-md p-2 cursor-pointer relative group">
-                                        <span id="console-link-display" class="text-gray-400 font-mono text-sm truncate mr-2">https://console.cloud.google.com/</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard text-gray-400 group-hover:text-yellow-300" viewBox="0 0 16 16">
-                                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
-                                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-                                        </svg>
-                                        <span id="console-copy-feedback" class="absolute right-2 top-1/2 -translate-y-1/2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded hidden">Copied!</span>
-                                    </div>
-                                </div>
-                           </li>
-                           <li>In the console's top navigation bar, click <span class="text-yellow-300 font-semibold">Select a project</span>, then <span class="text-yellow-300 font-semibold">New Project</span> in the top right corner.
-                            <div class="screenshot-placeholder"><img src="img/find-project.png"/></div>
-                           </li>
-                           <li>Give your project a name and click <span class="text-yellow-300 font-semibold">Create</span>. (No Organization)
-                            <div class="screenshot-placeholder"><img src="img/new-project.png"/></div>
-                           </li>
-                           <li>Once created, select it. In the left-hand menu, go to <span class="text-yellow-300 font-semibold">Billing</span>.
-                             <div class="screenshot-placeholder"><img src="img/billing.png"/></div>
-                           </li>
-                           <li>
-                                Click <span class="text-yellow-300 font-semibold">Link a billing account</span>, select <span class="text-yellow-300 font-semibold">Google Cloud Platform Trial Billing Account</span> from the dropdown, and click <span class="text-yellow-300 font-semibold">Set account</span>.
-                                <p class="text-gray-400 text-xs italic mt-2">(If you don't see the dropdown menu, wait one minute for the credit to be applied and reload the page.)</p>
-                                <div class="screenshot-placeholder"><img src="img/link-billing.png"/></div>
-                           </li>
-                        </ul>
-                        
-                    </div>
-                </div>
+                
 
-                <!-- Step 3: Lab Link -->
+                <!-- Step 2: Lab Link -->
                 <div id="modal-step-3" class="modal-step-content hidden">
-                    <h3 class="text-xl mb-4 text-gray-200 font-bold">Objective 3: Begin Your Training</h3>
+                    <h3 class="text-xl mb-4 text-gray-200 font-bold">Objective 2: Begin Your Training</h3>
                     <p class="text-sm text-gray-300">Your preparations are complete. Your credits are active and your project is configured. It's time to begin your trial and master your craft.</p>
                     <p class="text-sm mt-4 text-gray-300">May your code be clean and your deployments swift, champion.</p>
                     <div class="text-center mt-8">
