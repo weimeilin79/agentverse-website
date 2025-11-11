@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('modal-next-btn');
     
     let currentStep = 1;
-    const totalSteps = 3; 
+    const totalSteps = 2; 
 
     // Open modal
     classSelection.addEventListener('click', (e) => {
